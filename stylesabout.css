@@ -55,3 +55,11 @@ ul.nav-links li a {
 ul.nav-links li a:hover {
     color: var(--logo-color);
 }
+
+.health-check-text {
+    text-align: center;
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #ffa500; /* Customize color */
+    margin-bottom: 10px; /* Space between text and image */
+    font-weight: bold;
+}
