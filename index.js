@@ -1,8 +1,8 @@
 // select toggle btn wrapper
 const toggleBtnIcons = document.querySelector('.toggle-icon');
 // select both the toggle btns as well the bars and the times
-const toggleBtnBars = document.querySelector('.times');
-const toggleBtntimes = document.querySelector('.bars');
+const toggleBtnBars = document.querySelector('.bars');
+const toggleBtntimes = document.querySelector('.times');
 // select the links-container and the nav links
 const linksContainer = document.querySelector('.links-container');
 const navContainer = document.querySelector('.nav-links');
