@@ -142,8 +142,6 @@ ul.nav-links li a:hover {
 .about-desc {
     font-family: 'Open sans', sans-serif;
     margin-top: 200px;
-    z-index: 2;
-    position: relative;
 }
 
 .about-desc h2 {
