@@ -460,6 +460,7 @@ ul.nav-links li a:hover {
     .about-desc img {
         width: 50px;
         height: auto;
+        z-index: 2; 
     }
 
 }
@@ -498,6 +499,7 @@ ul.nav-links li a:hover {
     top: 10%; /* Adjust to position properly above the image */
     left: 0;
     transform: none;
+    z-index: 1; 
 }
 
 @media screen and (max-width: 500px) {
