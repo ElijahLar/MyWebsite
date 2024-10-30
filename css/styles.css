@@ -497,14 +497,18 @@ ul.nav-links li a:hover {
 }
 
 .health-check-text {
-  position: absolute;
-  z-index: 1;
-  top: 30%;
-  left: 10%;
-  width: 80%;
-  transform: translateY(-50%);
+    position: absolute;
+    top: 35%; /* Adjust this value to position below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem; /* Adjust the size for mobile */
+    color: #ffa500;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2;
 }
-
 @media screen and (max-width: 500px) {
     .health-check-text {
         top: 50%; /* Adjust this for better mobile positioning */
