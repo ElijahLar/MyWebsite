@@ -459,7 +459,7 @@ ul.nav-links li a:hover {
 
     .about-desc img {
         width: 50px;
-        height: auto; 
+        height: auto;
     }
 
 }
@@ -489,37 +489,31 @@ ul.nav-links li a:hover {
     .about-desc img {
         width: 50px;
         height: auto;
-     
     }
 
 }
 
-.text-wrapper {
-    position: relative;
-    z-index: 2;
-}
-
+/* Health check text styling */
 .health-check-text {
     position: absolute;
-    top: 35%;
+    top: 20%; /* Adjust this value to position above the image */
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    color: #ffa500 !important;
+    font-size: 2rem; /* Adjust the size as needed */
+    color: #ffa500;
     font-weight: bold;
+  /*  text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional background for readability */
     padding: 10px;
     border-radius: 5px;
-    z-index: 3; /* Ensure it layers above other elements */
+    z-index: 2;
 }
 
+/* Media query for smaller screens */
 @media screen and (max-width: 500px) {
     .health-check-text {
-        top: 90%; /* Position it even lower */
-        left: 10%;
-        transform: translateX(0);
-    }
-    .about-desc {
-        margin-top: 150px; /* Further space out from the top */
+        top: 60%; /* Adjust top positioning specifically for small screens */
+        font-size: 1.2rem; /* Further decrease font size on mobile */
     }
 }
