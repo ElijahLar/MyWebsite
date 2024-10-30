@@ -140,7 +140,7 @@ ul.nav-links li a:hover {
 }
 
 .about-desc {
-    font-family: 'Opens sans', sans-serif;
+    font-family: 'Open sans', sans-serif;
     margin-top: 200px;
 }
 
@@ -491,12 +491,6 @@ ul.nav-links li a:hover {
         height: auto;
     }
 
-}
-
-/* Section 1 styling */
-.section-1 {
-    position: relative;
-    text-align: center;
 }
 
 /* Health check text styling */
