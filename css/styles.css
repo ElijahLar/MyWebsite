@@ -501,11 +501,11 @@ ul.nav-links li a:hover {
     transform: translateX(-50%);
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem; /* Adjust the size for mobile */
-    color: #ffa500;
+    color: #ffa500 !important; /* Use !important to enforce the color */
     font-weight: bold;
     padding: 10px;
     border-radius: 5px;
-    z-index: 2;
+    z-index: 
 }
 @media screen and (max-width: 500px) {
     .health-check-text {
