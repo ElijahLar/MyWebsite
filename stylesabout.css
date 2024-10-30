@@ -59,7 +59,7 @@ ul.nav-links li a:hover {
 .health-check-text {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    font-size: 1.5rem; /* Adjust the size as needed */
+    font-size: 4rem; /* Adjust the size as needed */
     color: #ffa500;
     margin-top: 20px;
     font-weight: bold;
