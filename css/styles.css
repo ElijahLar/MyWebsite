@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 
-*,::after,::before {
+*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,9 +14,10 @@ body {
     --body-bg-color: #383636;
     --text-white: #ff0000;
     --logo-color: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+
     background: var(--body-bg-color);
-    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 header {
@@ -44,6 +47,7 @@ nav {
 .toggle-icon .fas {
     font-size: 2rem;
     padding: 10px;
+    /* background: rgb(24, 23, 23); */
     color: #acabab;
     cursor: pointer;
     transition: .3s linear;
@@ -98,6 +102,8 @@ ul.nav-links li a:hover {
     margin: 35px 10px;
     font-size: 1.5rem;
     color: rgb(164, 40, 235);
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 
@@ -123,41 +129,37 @@ ul.nav-links li a:hover {
 /* about desc section */
 .section-1 {
     position: left;
-    padding: 20px; /* Add padding for mobile devices */
 }
 
 .container {
-    height: auto;
-    width: 100%;
+    height: 100vh;
+    width: 88%;
     margin: auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
 }
 
 .about-desc {
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 100px;
-    text-align: center; /* Center text for mobile */
+    font-family: 'Open sans', sans-serif;
+    margin-top: 200px;
 }
 
 .about-desc h2 {
-    font-size: 3rem;
+    width: 200px;
+    font-size: 4rem;
     color: #ffffff;
     letter-spacing: 3px;
 }
 
 .about-desc #name {
     max-width: 600px;
-    font-size: 3rem;
+    font-size: 6rem;
     color: #CC6C06;
 }
 
 .about-desc #job {
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #fff;
 }
 
@@ -165,7 +167,7 @@ ul.nav-links li a:hover {
     width: 470px;
     margin: 30px 0;
     color: #fcfcfc;
-    font-family: "Open Sans", cursive;
+    font-family: "Open sans", cursive;
     font-size: 18px;
 }
 
@@ -189,6 +191,8 @@ ul.nav-links li a:hover {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 
@@ -203,7 +207,11 @@ ul.nav-links li a:hover {
     height: 100%;
     left: -5%;
     top: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    -webkit-transform: skewX(-19deg);
+    -ms-transform: skewX(-10deg);
     transform: skewX(-10deg);
 }
 
@@ -212,6 +220,7 @@ ul.nav-links li a:hover {
 }
 
 .contact-button span.base {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     position: absolute;
     width: 100%;
@@ -287,7 +296,6 @@ ul.nav-links li a:hover {
     color: var(--logo-color);
 }
 
-/* Logo animation */
 .logo-animation {
     width: 100%;
     height: 100%;
@@ -307,6 +315,7 @@ ul.nav-links li a:hover {
     height: 30px;
     animation: square 15s infinite;
     transition-timing-function: linear;
+    /* border-radius: 50%; */
 }
 
 .logo-animation li:nth-child(1) {
@@ -348,51 +357,163 @@ ul.nav-links li a:hover {
         opacity: 0;
         transform: translateY(0) rotate(-45deg);
     }
+
     100% {
         opacity: 0.5;
         transform: translateY(-1100px) rotate(-45deg);
     }
 }
 
-/* Media queries */
+
+
+
+
+
+/* media query */
+/* media query */
+/* media query */
+
 @media screen and (min-width: 800px) {
     header {
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     .nav-center {
         max-width: 1190px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
     .links-container {
         height: auto !important;
     }
+
     ul.nav-links {
         display: flex;
         height: auto;
     }
+
     ul.nav-links li {
         padding: 0;
         width: 100px;
     }
+
     .toggle-icon {
         display: none;
     }
+
     .resume {
         display: block;
     }
+
     .social-icons {
         display: none;
     }
+
     .icons {
         display: block;
     }
+
     .hero-img img {
         display: block;
     }
+
 }
 
-@media screen and (max-width: 500[_{{{CITATION{{{_1{](https://github.com/bgaworsk/apps-mocks/tree/dc6a9425c66ace79964bc9c47c63144b719e0b55/src%2FApp.js)
+
+/* work on the container when you come back */
+
+
+@media screen and (min-width: 0) and (max-width: 500px) {
+    .about-desc h2 {
+        font-size: 3rem;
+    }
+
+    .about-desc #name {
+        max-width: 400px;
+        font-size: 3rem;
+    }
+
+    .about-desc #job {
+        font-size: 1.5rem;
+    }
+
+    .contact-button {
+        max-width: 190px;
+    }
+
+    .achievement h1 {
+        font-size: 2.5rem;
+    }
+
+    .ach {
+        width: 150px;
+    }
+
+    .ach span {
+        font-size: 14px;
+    }
+
+    .about-desc img {
+        width: 50px;
+        height: auto;
+    }
+
+}
+
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+    .about-desc h2 {
+        font-size: 2.7rem;
+    }
+
+    .about-desc #name {
+        font-size: 4rem;
+    }
+
+    .about-desc #job {
+        font-size: 2rem;
+    }
+
+    .achievement h1 {
+        font-size: 3rem;
+    }
+
+    .ach {
+        width: 150px;
+    }
+
+    .about-desc img {
+        width: 50px;
+        height: auto;
+    }
+
+}
+
+/* Health check text styling */
+.health-check-text {
+    position: absolute;
+    top: 20%; /* Adjust this value to position above the image */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem; /* Adjust the size as needed */
+    color: #ffa500;
+    font-weight: bold;
+  /*  text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional background for readability */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 500px) {
+    .health-check-text {
+        top: 60%; /* Adjust top positioning specifically for small screens */
+        font-size: 1.2rem; /* Further decrease font size on mobile */
+    }
+}
