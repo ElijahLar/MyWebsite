@@ -40,22 +40,33 @@ nav {
     align-items: center;
 }
 
-/* Toggle button styles */
 .toggle-icon .fas {
     font-size: 2rem;
     color: #acabab;
     cursor: pointer;
-    transition: .3s linear;
+    transition: transform 0.3s linear;
+    /* Only animate transform */
 }
 
 .toggle-icon .fas:hover {
-    transform: scale(0.8) rotate(-45deg);
+    transform: scale(0.8);
+    /* Keep hover effect simple */
 }
+
+/* Add a class to handle active state */
+.toggle-icon .active {
+    transform: rotate(90deg);
+    /* Indicate active state */
+}
+
 
 .links-container {
     height: 0;
+    /* Initial state */
     overflow: hidden;
-    transition: all .8s linear;
+    /* Prevent content from showing */
+    transition: height 0.8s ease;
+    /* Smooth transition */
 }
 
 ul.nav-links {
@@ -302,10 +313,6 @@ ul.nav-links li a:hover {
     .nav-center {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .links-container {
-        height: auto !important;
     }
 
     ul.nav-links {
