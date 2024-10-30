@@ -350,7 +350,7 @@ ul.nav-links li a:hover {
         width: auto;
     }
 
-    .resume {}
+
 
     .social-icons {
         display: block;
@@ -431,14 +431,33 @@ ul.nav-links li a:hover {
 
 .button-container {
     display: flex;
+    flex-direction: row;
+    /* Default layout for larger screens */
     gap: 20px;
     /* Space between buttons */
-    margin: 25px 0;
+    margin: -25px 0;
     /* Adjust this value for vertical spacing */
-    margin-left: -200px;
-    /* Add this line to move buttons to the left */
-    justify-content: center;
+    justify-content: left;
     /* Center the buttons horizontally */
+}
+
+@media screen and (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        /* Stack buttons on mobile */
+        gap: 10px;
+        /* Adjust space for stacked buttons */
+        align-items: center;
+        /* Center align buttons */
+    }
+
+    .contact-button,
+    .pricing-button {
+        width: 100%;
+        /* Make buttons full-width on mobile */
+        max-width: 300px;
+        /* Set a max width for better appearance */
+    }
 }
 
 .pricing-button {
