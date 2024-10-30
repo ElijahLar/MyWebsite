@@ -10,11 +10,10 @@ nav {
     align-items: center;
 }
 
-/* toggle btn starts here */
+/* Toggle button styling */
 .toggle-icon .fas {
     font-size: 2rem;
     padding: 10px;
-    /* background: rgb(24, 23, 23); */
     color: #acabab;
     cursor: pointer;
     transition: .3s linear;
@@ -29,7 +28,7 @@ nav {
     display: none;
 }
 
-/* toggle btn ends here */
+/* Links container styling */
 .links-container {
     height: 0;
     overflow: hidden;
@@ -56,6 +55,13 @@ ul.nav-links li a:hover {
     color: var(--logo-color);
 }
 
+/* Section 1 styling */
+.section-1 {
+    position: relative;
+    text-align: center;
+}
+
+/* Health check text styling */
 .health-check-text {
     position: absolute;
     top: 20%; /* Adjust this value to position above the image */
@@ -66,8 +72,14 @@ ul.nav-links li a:hover {
     color: #ffa500;
     font-weight: bold;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6); /* Optional background for better readability */
+    background-color: rgba(0, 0, 0, 0.6); /* Optional background for readability */
     padding: 10px;
     border-radius: 5px;
-    z-index: 2; /* Ensure it appears above other elements */
+    z-index: 2;
+}
+
+/* Hero image styling */
+.hero-img {
+    position: relative;
+    z-index: 1;
 }
