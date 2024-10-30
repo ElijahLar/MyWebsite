@@ -14,11 +14,9 @@ body {
     --body-bg-color: #383636;
     --text-white: #ff0000;
     --logo-color: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
-
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
     background: var(--body-bg-color);
-}
+    overflow-x: hidden; /* Prevent horizontal scroll */
 
 header {
     border-bottom: 1px solid rgb(0, 0, 0);
@@ -126,22 +124,20 @@ ul.nav-links li a:hover {
     color: var(--body-bg-color);
 }
 
-/* about desc section */
-.section-1 {
-    position: left;
-}
-
-.container {
-    height: 100vh;
-    width: 88%;
+.section-1, .container {
+    width: 100%;
     margin: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-}
+    justify-content: center;
+
 
 .about-desc {
-    font-family: 'Open sans', sans-serif;
-    margin-top: 200px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 50px;
+    text-align: center;
+    width: 90%;
 }
 
 .about-desc h2 {
@@ -493,22 +489,12 @@ ul.nav-links li a:hover {
 
 }
 
-/* Health check text styling */
 .health-check-text {
-    position: absolute;
-    top: 20%; /* Adjust this value to position above the image */
-    left: 50%;
-    transform: translateX(-50%);
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem; /* Adjust the size as needed */
-    color: #ffa500;
+    font-size: 1.2rem;
+    color: #ffa500 !important;
     font-weight: bold;
-  /*  text-align: center;
-    background-color: rgba(0, 0, 0, 0.6); /* Optional background for readability */
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 2;
-}
+    margin-top: 20px
 
 /* Media query for smaller screens */
 @media screen and (max-width: 500px) {
@@ -517,3 +503,19 @@ ul.nav-links li a:hover {
         font-size: 1.2rem; /* Further decrease font size on mobile */
     }
 }
+
+    @media screen and (min-width: 600px) {
+    .about-desc, .health-check-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about-desc {
+        margin-top: 100px;
+        text-align: left;
+    }
+    .health-check-text {
+        font-size: 2rem;
+        margin-top: 30px;
+    
