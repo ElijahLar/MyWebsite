@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --body-bg-color: linear-gradient(to right, hsl(210, 60%, 50%), hsl(210, 80%, 15%));
+    --text-color: #ffffff;
+    --logo-color: #f9f9f9;
+    --accent-color: #f39c12;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+    background: var(--body-bg-color);
+    color: var(--text-color);
+}
+
+header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: var(--body-bg-color);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.nav-center {
+    width: 90%;
+    margin: auto;
+}
+
+nav {
+    height: 11vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Toggle button styles */
+.toggle-icon .fas {
+    font-size: 2rem;
+    color: #acabab;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.toggle-icon .fas:hover {
+    transform: scale(0.8) rotate(-45deg);
+}
+
+.links-container {
+    height: 0;
+    overflow: hidden;
+    transition: all .8s linear;
+}
+
+ul.nav-links {
+    list-style: none;
+}
+
+ul.nav-links li {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+ul.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+ul.nav-links li a:hover {
+    color: var(--accent-color);
+}
+
+.active {
+    font-size: 1.2rem;
+    color: #fafafa;
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons .fab {
+    margin: 35px 10px;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    transition: all .3s ease-in-out;
+}
+
+.social-icons .fab:hover {
+    color: var(--text-color);
+}
+
+.resume {
+    text-decoration: none;
+    color: var(--accent-color);
+    padding: 10px 30px;
+    border: 1px solid var(--accent-color);
+    display: none;
+    transition: .3s linear all;
+}
+
+.resume:hover {
+    transform: scale(0.8);
+    background: var(--accent-color);
+    color: var(--body-bg-color);
+}
+
+/* About description section */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.about-desc {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 20vh;
+    /* Adjust margin for better centering */
+}
+
+.about-desc h2 {
+    font-size: 4rem;
+    color: var(--text-color);
+    letter-spacing: 3px;
+}
+
+.about-desc #name {
+    font-size: 6rem;
+    background-clip: text;
+    color: black;
+    opacity: 50%;
+}
+
+.about-desc #job {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.about-desc p {
+    margin: 30px 0;
+    color: #fcfcfc;
+    font-family: "Open Sans", cursive;
+    font-size: 18px;
+}
+
+/* Contact button styles */
+.contact-button {
+    margin: 25px 0;
+    text-decoration: none;
+    color: var(--accent-color);
+    width: 100%;
+    max-width: 220px;
+    line-height: 50px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    position: relative;
+    letter-spacing: 3px;
+}
+
+.contact-button div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.contact-button:hover div {
+    transform: scale(0.9);
+}
+
+.contact-button span.bg {
+    background: var(--accent-color);
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: -5%;
+    top: 0;
+    transition: all .3s ease-in-out;
+    transform: skewX(-10deg);
+}
+
+.contact-button:hover span.bg {
+    width: 110%;
+}
+
+.contact-button span.base {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border: 3px solid var(--accent-color);
+}
+
+.contact-button span.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.contact-button:hover span.text {
+    color: #1d1d1d;
+}
+
+/* Responsive styles */
+.hero-img img {
+    width: 100%;
+    /* Full width on smaller screens */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.icons {
+    position: absolute;
+    bottom: 120px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    /* Stack icons vertically */
+    align-items: center;
+    /* Center icons */
+}
+
+.icons .fab {
+    font-size: 2.5rem;
+    color: #f7f7f7;
+    margin-bottom: 10px;
+    /* Add spacing between icons */
+}
+
+.achievement {
+    display: flex;
+}
+
+.achievement h1 {
+    font-size: 4.5rem;
+    color: hsl(210, 60%, 30%);
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.ach {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.ach span {
+    color: var(--accent-color);
+}
+
+.logo-animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.logo-animation li {
+    position: absolute;
+    bottom: -150px;
+    background: rgba(211, 114, 11, 0.35);
+    width: 30px;
+    height: 30px;
+    animation: square 15s infinite;
+}
+
+@keyframes square {
+    0% {
+        opacity: 0;
+        transform: translateY(0) rotate(-45deg);
+    }
+
+    100% {
+        opacity: 0.5;
+        transform: translateY(-1100px) rotate(-45deg);
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+    .nav-center {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links-container {
+        height: auto !important;
+    }
+
+    ul.nav-links {
+        flex-direction: column;
+        height: auto;
+    }
+
+    ul.nav-links li {
+        width: auto;
+    }
+
+    .resume {
+        display: block;
+    }
+
+    .social-icons {
+        display: block;
+    }
+
+    .icons {
+        bottom: 80px;
+        /* Adjust icon position for mobile */
+    }
+
+    .hero-img img {
+        width: 80%;
+        /* Adjust size for mobile */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-desc h2 {
+        font-size: 3rem;
+        /* Reduce size for medium screens */
+    }
+
+    .about-desc #name {
+        font-size: 4rem;
+        /* Reduce size for medium screens */
+    }
+
+    .about-desc #job {
+        font-size: 1.8rem;
+        /* Reduce size for medium screens */
+    }
+
+    .contact-button {
+        max-width: 90%;
+        /* Make button more responsive */
+    }
+
+    .achievement h1 {
+        font-size: 2.5rem;
+        /* Reduce size for medium screens */
+    }
+
+    .ach {
+        width: 100%;
+    }
+
+    .icons .fab {
+        font-size: 2rem;
+        /* Adjust icon size */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about-desc {
+        margin-top: 10vh;
+        /* Reduce top margin for small screens */
+        padding: 0 10px;
+        /* Add padding for small screens */
+    }
+
+    .health-check-text {
+        top: 60%;
+        font-size: 1.2rem;
+    }
+
+    .icons {
+        bottom: 60px;
+        /* Further adjust icon position for small screens */
+    }
+}
+
+@keyframes bounceColor {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        color: hsl(0, 0%, 100%);
+    }
+
+    40% {
+        transform: translateY(-10px);
+        color: hsl(0, 0%, 0%);
+    }
+}
+
+.health-check-text {
+    animation: bounceColor 1s infinite;
+}

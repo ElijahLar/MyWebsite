@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            background-color: #425796;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: auto;
+            /* Ensure no margin */
+            padding: 0;
+            /* Ensure no padding */
+        }
+
+        .nav-center {
+            width: 1000px;
+            /* Full width */
+            margin: auto;
+            /* Ensure no margin */
+            padding: 0;
+            /* Ensure no padding */
+            border-bottom: 2px solid black;
+            /* Add line */
+        }
+
+        nav {
+            display: flex;
+            /* Flex layout for alignment */
+            justify-content: space-between;
+            /* Space between elements */
+            align-items: center;
+            /* Center items vertically */
+            padding: 10px 20px;
+            /* Add padding for some space */
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 50px 0 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        .text-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            margin: 0 auto;
+            max-width: 800px;
+            text-align: left;
+            animation: floatIn 1.5s ease forwards;
+        }
+
+        .text-container p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        @keyframes floatIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-center">
+        <nav>
+            <a href="index.html"><img src="images/New Project (2).png" alt="logo" width="60" height="70"
+                    class="logo"></a>
+            <div class="toggle-icon">
+                <span class="toggle-btn bars"><i class="fas fa-bars"></i></span>
+                <span class="toggle-btn times"><i class="fas fa-times"></i></span>
+            </div>
+        </nav>
+
+        <div class="links-container">
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home active"></i></a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="mailto:Elijah.larsson@outlook.com">Contact</a></li>
+                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <h1>A Jack of All Trades</h1>
+    <h3>Digital analytics specialist and SEO-specialist</h3>
+    <div class="text-container">
+        <p>My name is Elijah Larsson, and I am a dedicated digital analytics specialist with a strong foundation in SEO,
+            MySQL, CSS, HTML, and JavaScript. I’m passionate about leveraging data insights and optimization strategies
+            to drive meaningful results and make a real impact. In addition to my technical skills, I find joy in
+            spending time with my family, my girlfriend, and my loyal dog, Rocky, who has been with me for 13 years.
+            This website is my first full-scale project, and while there's always room for growth, I’ve focused on
+            creating an engaging and informative homepage to showcase my expertise and dedication.</p>
+    </div>
+</body>
+
+</html>
