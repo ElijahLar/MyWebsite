@@ -14,7 +14,7 @@ body {
     --body-bg-color: linear-gradient(to right, hsl(210, 60%, 50%), hsl(210, 80%, 15%));
     --text-color: #ffffff;
     --logo-color: #f9f9f9;
-    --accent-color: #f39c12;
+    --accent-color: #1a3044;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
     background: var(--body-bg-color);
     color: var(--text-color);
@@ -110,19 +110,54 @@ ul.nav-links li a:hover {
 
 .resume {
     text-decoration: none;
-    color: var(--accent-color);
+    color: rgb(255, 255, 255);
+    /* Change to white for consistency */
     padding: 10px 30px;
-    border: 1px solid var(--accent-color);
-    display: block;
-    /* Make it visible */
+    border: 3px solid var(--accent-color);
+    /* Match border color */
+    background: var(--accent-color);
+    /* Set background color */
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
     transition: .3s linear all;
 }
 
 .resume:hover {
-    transform: scale(0.8);
-    background: var(--accent-color);
-    color: var(--body-bg-color);
+    transform: scale(1.2);
+    /* Scale down on hover */
 }
+
+.resume:hover span.bg {
+    width: 110%;
+    /* Adjust the width on hover */
+}
+
+.resume span.bg {
+    background: rgb(29, 29, 29);
+    /* Background color for hover effect */
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: all .3s ease-in-out;
+}
+
+.resume span.base {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.resume span.text {
+    position: relative;
+    z-index: 1;
+    /* Ensure text stays above the background */
+}
+
+
 
 .container {
     width: 90%;
@@ -315,9 +350,7 @@ ul.nav-links li a:hover {
         width: auto;
     }
 
-    .resume {
-        display: block;
-    }
+    .resume {}
 
     .social-icons {
         display: block;
@@ -394,4 +427,77 @@ ul.nav-links li a:hover {
 
 .health-check-text {
     animation: bounceColor 1s infinite;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    /* Space between buttons */
+    margin: 25px 0;
+    /* Adjust this value for vertical spacing */
+    margin-left: -200px;
+    /* Add this line to move buttons to the left */
+    justify-content: center;
+    /* Center the buttons horizontally */
+}
+
+.pricing-button {
+    margin: 25px 0;
+    text-decoration: none;
+    color: var(--accent-color);
+    width: 100%;
+    max-width: 220px;
+    line-height: 50px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    position: relative;
+    letter-spacing: 3px;
+}
+
+.pricing-button div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.pricing-button:hover div {
+    transform: scale(0.9);
+}
+
+.pricing-button span.bg {
+    background: var(--accent-color);
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: -5%;
+    top: 0;
+    transition: all .3s ease-in-out;
+    transform: skewX(-10deg);
+}
+
+.pricing-button:hover span.bg {
+    width: 110%;
+}
+
+.pricing-button span.base {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border: 3px solid var(--accent-color);
+}
+
+.pricing-button span.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.pricing-button:hover span.text {
+    color: #1d1d1d;
 }
