@@ -512,15 +512,17 @@ ul.nav-links li a:hover {
     border-radius: 5px;
     z-index: 3; /* Ensure it layers above other elements */
 }
+
 @media screen and (max-width: 500px) {
     .health-check-text {
-        top: 80%; /* Position lower to avoid overlap */
+        top: 90%; /* Position it even lower */
         left: 10%;
         transform: translateX(0);
     }
     .about-desc {
-        margin-top: 300px; /* Increase top margin for more space */
+        margin-top: 150px; /* Further space out from the top */
     }
 }
+
 
 
