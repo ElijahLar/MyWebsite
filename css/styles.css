@@ -514,9 +514,12 @@ ul.nav-links li a:hover {
 }
 @media screen and (max-width: 500px) {
     .health-check-text {
-        top: 50%; /* Adjust this for better mobile positioning */
-        left: 10%; /* Ensure it doesn't overlap with "Hi, I'm Elijah" text */
+        top: 80%; /* Position lower to avoid overlap */
+        left: 10%;
         transform: translateX(0);
+    }
+    .about-desc {
+        margin-top: 300px; /* Increase top margin for more space */
     }
 }
 
