@@ -493,28 +493,19 @@ ul.nav-links li a:hover {
 
 }
 
-/* Health check text styling */
 .health-check-text {
-    position: absolute;
-    top: 20%; /* Adjust this value to position above the image */
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem; /* Adjust the size as needed */
-    color: #ffa500;
-    font-weight: bold;
-  /*  text-align: center;
-    background-color: rgba(0, 0, 0, 0.6); /* Optional background for readability */
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 2;
+    position: relative;
+    top: 10%; /* Adjust to position properly above the image */
+    left: 0;
+    transform: none;
 }
 
-/* Media query for smaller screens */
 @media screen and (max-width: 500px) {
     .health-check-text {
-        top: 60%; /* Adjust top positioning specifically for small screens */
-        font-size: 1.2rem; /* Further decrease font size on mobile */
+        top: 50%; /* Adjust this for better mobile positioning */
+        left: 10%; /* Ensure it doesn't overlap with "Hi, I'm Elijah" text */
+        transform: translateX(0);
     }
 }
+
 
