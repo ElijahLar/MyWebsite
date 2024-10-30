@@ -142,6 +142,8 @@ ul.nav-links li a:hover {
 .about-desc {
     font-family: 'Open sans', sans-serif;
     margin-top: 200px;
+    z-index: 2;
+    position: relative;
 }
 
 .about-desc h2 {
@@ -495,11 +497,12 @@ ul.nav-links li a:hover {
 }
 
 .health-check-text {
-    position: relative;
-    top: 10%; /* Adjust to position properly above the image */
-    left: 0;
-    transform: none;
-    z-index: 1; 
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  left: 10%;
+  width: 80%;
+  transform: translateY(-50%);
 }
 
 @media screen and (max-width: 500px) {
