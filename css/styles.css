@@ -516,8 +516,3 @@ ul.nav-links li a:hover {
     z-index: 2;
 }
 
-/* Hero image styling */
-.hero-img {
-    position: relative;
-    z-index: 1;
-}
