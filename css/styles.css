@@ -510,3 +510,11 @@ ul.nav-links li a:hover {
     z-index: 2;
 }
 
+/* Media query for smaller screens */
+@media screen and (max-width: 500px) {
+    .health-check-text {
+        top: 40%; /* Adjust top positioning specifically for small screens */
+        font-size: 1.2rem; /* Further decrease font size on mobile */
+    }
+}
+
