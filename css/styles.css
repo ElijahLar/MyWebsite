@@ -57,6 +57,7 @@ nav {
     color: #acabab;
     cursor: pointer;
     transition: transform 0.3s linear;
+    margin-right: 30px;
 }
 
 .toggle-icon .fas:hover {
