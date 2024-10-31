@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Include your existing CSS here */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            width: 100vw;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(to right, hsl(210, 60%, 50%), hsl(210, 50%, 45%));
+            color: #000000;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            /* Set a max-width for the form */
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            margin: 10px 0;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        input[type="email"],
+        textarea {
+            width: 90%;
+            max-width: 100%;
+            /* Set max width to 100% to fit the form */
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+            /* Allow vertical resizing for the textarea */
+        }
+
+        textarea {
+            height: 100px;
+            /* Set a specific height for the textarea */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ff9800;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e68a00;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mdkoeado" method="POST">
+        <label>
+            Your email:
+            <input type="email" name="email" required>
+        </label>
+        <label>
+            Your message:
+            <textarea name="message" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+    </form>
+</body>
+
+</html>
