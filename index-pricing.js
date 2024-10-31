@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize menu state if needed
 });
 
-const text = "Great prices for great services!";
+const text = "Great services for great prices!";
 let index = 0;
 
 function type() {
