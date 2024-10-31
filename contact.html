@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
-        /* Include your existing CSS here */
         html,
         body {
             height: 100%;
@@ -23,11 +22,50 @@
             margin: 0;
             width: 100vw;
             height: 100vh;
+            justify-content: center;
+            /* Center vertically */
+            align-items: center;
+            /* Center horizontally */
         }
 
         h2 {
             text-align: center;
-            margin-top: 20px;
+            margin: 0;
+            /* Remove default margin */
+            white-space: nowrap;
+            /* Prevent text from wrapping */
+            overflow: hidden;
+            /* Hide overflow for the typing effect */
+            border-right: 2px solid;
+            /* Create a cursor effect */
+            width: 0;
+            /* Start with width 0 for animation */
+            animation: typing 2.5s steps(12) forwards, blink-caret 0.75s step-end infinite;
+            /* Faster typing animation */
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 12ch;
+            }
+
+            /* Adjust based on the text length */
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: black;
+            }
         }
 
         form {
@@ -35,7 +73,6 @@
             flex-direction: column;
             align-items: center;
             max-width: 400px;
-            /* Set a max-width for the form */
             margin: 20px auto;
             background: rgba(255, 255, 255, 0.9);
             padding: 20px;
@@ -53,18 +90,15 @@
         textarea {
             width: 90%;
             max-width: 100%;
-            /* Set max width to 100% to fit the form */
             padding: 10px;
             margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
             resize: vertical;
-            /* Allow vertical resizing for the textarea */
         }
 
         textarea {
             height: 100px;
-            /* Set a specific height for the textarea */
         }
 
         button {
@@ -79,24 +113,73 @@
         }
 
         button:hover {
-            background-color: #e68a00;
+            background-color: #d18a17;
+        }
+
+        .plan-selection {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .plan-selection button {
+            margin: 0 5px;
+            background-color: #297baa;
+        }
+
+        .plan-text {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
-    <h2>Contact Us</h2>
+    <h2 id="heading">Contact Us</h2>
     <form action="https://formspree.io/f/mdkoeado" method="POST">
+        <div class="plan-selection">
+            <button type="button" onclick="updatePlan('Basic Plan')">Basic Plan</button>
+            <button type="button" onclick="updatePlan('Standard Plan')">Standard Plan</button>
+            <button type="button" onclick="updatePlan('Premium Plan')">Premium Plan</button>
+        </div>
         <label>
             Your email:
             <input type="email" name="email" required>
         </label>
         <label>
-            Your message:
+            Selected Plan:
+            <input type="text" id="selectedPlan" name="plan" readonly>
+        </label>
+        <label>
+            What exactly do you need help with?:
             <textarea name="message" required></textarea>
         </label>
         <button type="submit">Send</button>
     </form>
+
+    <script>
+        function updatePlan(plan) {
+            document.getElementById('selectedPlan').value = plan;
+        }
+
+        function startTypingAnimation() {
+            const heading = document.getElementById('heading');
+            heading.style.animation = 'none'; // Reset animation
+            setTimeout(() => {
+                heading.style.animation = 'typing 2.5s steps(12) forwards, blink-caret 0.75s step-end infinite'; // Restart animation
+            }, 100); // Short delay to allow resetting
+        }
+
+        setInterval(startTypingAnimation, 4000); // Repeat every 4 seconds (2.5s typing + 1.5s delay)
+        startTypingAnimation(); // Start the animation on load
+    </script>
 </body>
 
 </html>
