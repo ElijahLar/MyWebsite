@@ -60,14 +60,36 @@ header {
     background: linear-gradient(135deg, #3a899c, #d9e7d5);
     border-radius: 10px;
     padding: 25px;
-    margin: 20px;
+    margin: 10px;
+    /* Reduce margin for mobile */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 90%;
+    /* Use a percentage for width on mobile */
+    max-width: 300px;
+    /* Set a max width to maintain size */
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px;
+    height: auto;
+    /* Let the height adjust */
+}
+
+/* Update the media query for better mobile layout */
+@media screen and (max-width: 800px) {
+    .pricing-container {
+        flex-direction: column;
+        /* Stack boxes vertically */
+        align-items: center;
+        /* Center align boxes */
+    }
+
+    .pricing-box {
+        width: 100%;
+        /* Ensure they are not too wide */
+        margin: 10px 0;
+        /* Vertical margin only for spacing */
+    }
 }
 
 .service-logos {
@@ -197,25 +219,45 @@ header {
 
 .typing-container {
     flex-grow: 1;
-    /* Allow it to take available space */
+    display: flex;
+    justify-content: center;
+    /* Center the text horizontally */
+    align-items: center;
+    /* Center the text vertically */
+    max-height: 100px;
+    /* Set a maximum height */
+    width: 100%;
+    /* Full width */
+    padding: 0 10px;
+    /* Add some horizontal padding */
+    box-sizing: border-box;
+    /* Include padding in the element's total width */
 }
 
 .typing-text {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.8rem;
-    /* Adjust size as needed */
+    font-size: 6vw;
+    /* Responsive font size */
     color: #bbd3d0;
-    /* Match your design */
     overflow: hidden;
-    /* Ensures the text appears one letter at a time */
     white-space: nowrap;
-    /* Keeps the text on one line */
     border-right: 3px solid;
-    /* Cursor effect */
     animation: caret 0.75s step-end infinite;
-    /* Cursor blinking effect */
     text-align: center;
-    margin-right: 90px;
+    margin: 0;
+    /* Remove right margin to avoid overflow */
+}
+
+/* Ensure the text scales nicely on smaller screens */
+@media screen and (max-width: 800px) {
+    .typing-text {
+        font-size: 5vw;
+        /* Increase font size for mobile */
+        max-width: 100%;
+        /* Ensure it fits within the container */
+        margin-top: 30px;
+        margin-bottom: -50px;
+    }
 }
 
 /* Cursor Blinking Animation */
