@@ -33,15 +33,5 @@ navLinks.forEach(link => {
     });
 });
 
-
-if (userLang.startsWith('sv')) {
-    window.location.href = "your-swedish-version-url.html"; // Replace with the actual URL for Swedish content
-}
-
-
-
-
-
-
 // Toggle menu on icon click
 toggleBtnIcons.addEventListener('click', toggleIcons);
