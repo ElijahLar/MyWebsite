@@ -17,7 +17,7 @@ body {
 }
 
 body {
-    --body-bg-color: linear-gradient(to right, hsl(210, 60%, 50%), hsl(210, 50%, 45%));
+    --body-bg-color: linear-gradient(to right, hsl(357, 58%, 57%), hsl(210, 46%, 55%));
     /* Updated gradient for calmness */
     --text-color: #ffffff;
     /* Keep white for readability */
@@ -46,7 +46,7 @@ header {
 }
 
 nav {
-    height: 11vh;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -260,13 +260,15 @@ ul.nav-links li a:hover {
 }
 
 .hero-img {
-    margin-left: auto;
+    align-items: center;
     /* This pushes the image to the right */
     margin-right: 0;
     /* Optional: to remove any right margin */
     display: block;
     /* Ensure it's block-level */
-    margin-bottom: -140px;
+    margin-bottom: -350px;
+    opacity: 80%;
+    margin-right: 50%;
 }
 
 
@@ -412,38 +414,9 @@ ul.nav-links li a:hover {
         padding: 0 10px;
     }
 
-    .health-check-text {
-        animation: bounceColor 1s infinite;
-        top: -100px;
-        /* Move it up */
-        left: 1px;
-        /* Move it to the right */
-        font-size: 1.5rem;
-        margin-right: -170px;
-        /* Keep this if needed for layout */
-        position: relative;
-        /* Allows using top/left */
-    }
-
-
     .icons {
         bottom: 60px;
     }
-}
-
-
-
-.health-check-text {
-    animation: bounceColor 1s infinite;
-    top: -100px;
-    /* Move it up */
-    left: 20px;
-    /* Move it to the right */
-    font-size: 1.5rem;
-    margin-right: -170px;
-    /* Keep this if needed for layout */
-    position: relative;
-    /* Allows using top/left */
 }
 
 
@@ -533,7 +506,7 @@ ul.nav-links li a:hover {
 .services {
     padding: 50px 0;
     text-align: center;
-    background: linear-gradient(to right, hsl(197, 84%, 17%), hsl(208, 55%, 50%));
+    background: linear-gradient(to right, hsl(357, 58%, 57%), hsl(210, 46%, 55%));
     /* Updated background for subtle contrast */
 }
 
