@@ -17,7 +17,7 @@ body {
 }
 
 body {
-    --body-bg-color: linear-gradient(to right, hsl(357, 58%, 57%), hsl(210, 46%, 55%));
+    --body-bg-color: linear-gradient(to right, hsl(231, 31%, 71%), hsl(210, 93%, 16%));
     /* Updated gradient for calmness */
     --text-color: #ffffff;
     /* Keep white for readability */
@@ -504,7 +504,7 @@ ul.nav-links li a:hover {
 .services {
     padding: 50px 0;
     text-align: center;
-    background: linear-gradient(to right, hsl(357, 58%, 57%), hsl(210, 46%, 55%));
+    background: linear-gradient(to right, hsl(231, 31%, 71%), hsl(210, 93%, 16%));
     /* Updated background for subtle contrast */
 }
 
