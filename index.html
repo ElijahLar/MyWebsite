@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EOL Media</title>
+    <meta name="description"
+        content="Elijah Larsson, a Data Analyst and SEO Specialist. Explore my site to see my services including Health Check, SEO, Analytics Setup, and targeted advertising campaigns.">
+    <title>my_portfolio</title>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
@@ -20,14 +22,12 @@
             <nav>
                 <a href="index.html"><img src="images/New Project (2).png" alt="logo" width="60" height="70"
                         class="logo"></a>
-                <!-- toggle buttons -->
                 <div class="toggle-icon">
                     <span class="toggle-btn bars"><i class="fas fa-bars"></i></span>
                     <span class="toggle-btn times"><i class="fas fa-times"></i></span>
                 </div>
             </nav>
 
-            <!-- Navigation links container -->
             <div class="links-container">
                 <ul class="nav-links">
                     <li><a href="index.html"><i class="fas fa-home active"></i></a></li>
@@ -35,8 +35,7 @@
                     <li><a href="mailto:Elijah.larsson@outlook.com">Contact</a></li>
                     <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Blog</a></li>
                     <li>
-                        <a href="https://docs.google.com/presentation/d/1Dvyb7e3j7tgd6POOoBPpQ6vkV6mXC7q28bjpRz_LdhA/edit?usp=sharing"
-                            target="_blank" class="resume">
+                        <a href="pricing.html" class="resume">
                             <span class="bg"></span>
                             <span class="base"></span>
                             <span class="text">Price</span>
@@ -49,6 +48,14 @@
 
     <!-- Section 1 -->
     <section class="section-1">
+
+        <div class="sidebar-button">
+            <button id="toggle-button">Get a 15-30</button>
+            <div id="sidebar-content" class="hidden">
+                <h2>Get a 15-30 minutes free website health check</h2>
+            </div>
+        </div>
+
         <div class="container">
             <div class="about-desc">
                 <h2>Hi,</h2>
@@ -57,7 +64,6 @@
                 <h1 id="job">Data Analyst, SEO-Specialist</h1>
                 <p><q>Passionate about digital analytics, coding and learning!</q></p>
 
-                <!-- Button container for Contact Me and Pricing -->
                 <div class="button-container">
                     <a href="mailto:Elijah.larsson@outlook.com" class="contact-button">
                         <div>
@@ -67,8 +73,7 @@
                         </div>
                     </a>
 
-                    <a href="https://docs.google.com/presentation/d/1Dvyb7e3j7tgd6POOoBPpQ6vkV6mXC7q28bjpRz_LdhA/edit?usp=sharing"
-                        target="_blank" class="pricing-button">
+                    <a href="pricing.html" class="pricing-button">
                         <div>
                             <span class="bg"></span>
                             <span class="base"></span>
@@ -78,26 +83,55 @@
                 </div>
             </div>
 
-            <!-- Health check text -->
-            <div class="health-check-text">
-                <h2>Get a 15-30 minutes free website health check</h2>
-            </div>
 
-            <!-- Hero image -->
+
             <div class="hero-img">
                 <img src="images/jag.png" alt="The Elijah Larsson">
             </div>
+        </div>
 
-            <!-- Social icons -->
-            <div class="icons">
-                <a href="https://www.instagram.com/eolmedia?igsh=MTdpMXhvMGZhemszdQ%3D%3D&utm_source=qr"
-                    target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/elijahlarsson/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>SERVICES</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <img src="images/Health-Check.png" alt="Health Check and SEO" class="service-logo">
+                <h3>Health Check and SEO</h3>
+                <p>Elevate your online presence with my comprehensive Health Check and SEO service. I conduct a thorough
+                    analysis of your website to identify performance issues, technical flaws, and areas for
+                    optimization. Utilizing the latest SEO strategies, I enhance your site’s visibility in search engine
+                    results, ensuring you attract the right audience. From keyword research and on-page optimization to
+                    backlink analysis and site speed enhancements, I provide tailored solutions that drive organic
+                    traffic and improve user experience. Take the first step towards digital success—let me help you
+                    achieve your online goals!</p>
+            </div>
+            <div class="service-box">
+                <img src="images/yest.png" alt="Google analytics Setup" class="service-logo">
+                <h3>Analytics Setup</h3>
+                <p>Maximize your data-driven decision-making with my comprehensive Analytics Setup service. I specialize
+                    in configuring Google Analytics, Google Tag Manager, and Looker Studio for any CMS, including
+                    WordPress, Wix, and more. I ensure seamless integration, enabling you to track user behavior,
+                    measure performance, and gain valuable insights. With tailored dashboards and detailed reports, I
+                    empower you to make informed marketing strategies and optimize your online presence effectively. Let
+                    me set up the analytics infrastructure you need to drive growth and enhance your business
+                    performance!</p>
+            </div>
+            <div class="service-box">
+                <img src="images/GoogleAds.png" alt="Google Ads and LinkedIn Campaign Service" class="service-logo">
+                <h3>Google Ads - LinkedIn Campaign</h3>
+                <p>Harness the power of targeted advertising with my Google Ads and LinkedIn Campaign Management
+                    service. I specialize in creating and managing effective campaigns designed to drive traffic,
+                    generate leads, and boost conversions. By conducting thorough market research, I identify your ideal
+                    audience and craft compelling ad copy that resonates. With ongoing monitoring and optimization, I
+                    ensure your campaigns achieve maximum ROI while adapting to the ever-changing digital landscape.
+                    Whether you're aiming to increase brand awareness or drive sales, I can help you build a
+                    comprehensive advertising strategy tailored to your needs.</p>
             </div>
         </div>
     </section>
 
-    <!-- Logo animation -->
     <ul class="logo-animation">
         <li><img src="images/New Project (2).png" width="200" height="auto"></li>
         <li><img src="images/New Project (2).png" width="700" height="auto"></li>
@@ -106,8 +140,22 @@
         <li></li>
         <li></li>
     </ul>
+
     <script src="index.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Elijah Larsson. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="About.html">About</a>
+                <a href="mailto:Elijah.larsson@outlook.com">Contact</a>
+                <a href="https://www.linkedin.com/in/elijahlarsson/">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-wave"></div> <!-- Add wave effect -->
+    </footer>
+
 </body>
 
 </html>

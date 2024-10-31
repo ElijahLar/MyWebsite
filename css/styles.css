@@ -10,11 +10,23 @@
     box-sizing: border-box;
 }
 
+html,
 body {
-    --body-bg-color: linear-gradient(to right, hsl(210, 60%, 50%), hsl(210, 80%, 15%));
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    --body-bg-color: linear-gradient(to right, hsl(210, 60%, 50%), hsl(210, 50%, 45%));
+    /* Updated gradient for calmness */
     --text-color: #ffffff;
+    /* Keep white for readability */
     --logo-color: #f9f9f9;
-    --accent-color: #1a3044;
+    /* Light logo color */
+    --accent-color: #ff9800;
+    /* Warm orange for enthusiasm and energy */
+    --dark-color: #2c3e50;
+    /* Darker shade for contrast and depth */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
     background: var(--body-bg-color);
     color: var(--text-color);
@@ -57,19 +69,14 @@ nav {
 
 .links-container {
     height: 0;
-    /* Start collapsed */
     overflow: hidden;
-    /* Hide overflow */
     transition: height 0.8s ease;
 }
-
 
 ul.nav-links {
     list-style: none;
     display: flex;
-    /* Show links in a row */
     flex-direction: column;
-    /* Change to column for mobile */
 }
 
 ul.nav-links li {
@@ -111,12 +118,9 @@ ul.nav-links li a:hover {
 .resume {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    /* Change to white for consistency */
     padding: 10px 30px;
     border: 3px solid var(--accent-color);
-    /* Match border color */
     background: var(--accent-color);
-    /* Set background color */
     display: inline-block;
     position: relative;
     overflow: hidden;
@@ -125,17 +129,14 @@ ul.nav-links li a:hover {
 
 .resume:hover {
     transform: scale(1.2);
-    /* Scale down on hover */
 }
 
 .resume:hover span.bg {
     width: 110%;
-    /* Adjust the width on hover */
 }
 
 .resume span.bg {
     background: rgb(29, 29, 29);
-    /* Background color for hover effect */
     position: absolute;
     width: 0;
     height: 100%;
@@ -154,10 +155,7 @@ ul.nav-links li a:hover {
 .resume span.text {
     position: relative;
     z-index: 1;
-    /* Ensure text stays above the background */
 }
-
-
 
 .container {
     width: 90%;
@@ -181,8 +179,9 @@ ul.nav-links li a:hover {
 .about-desc #name {
     font-size: 6rem;
     background-clip: text;
-    color: black;
-    opacity: 50%;
+    color: var(--dark-color);
+    /* Darker color for contrast */
+    opacity: 70%;
 }
 
 .about-desc #job {
@@ -259,9 +258,22 @@ ul.nav-links li a:hover {
     color: #1d1d1d;
 }
 
-.hero-img img {
-    width: 100%;
-    height: auto;
+.hero-img {
+    margin-left: auto;
+    /* This pushes the image to the right */
+    margin-right: 0;
+    /* Optional: to remove any right margin */
+    display: block;
+    /* Ensure it's block-level */
+    margin-bottom: -140px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .hero-image {
+        /* Hide the hero image on devices smaller than 800px */
+        display: none;
+    }
 }
 
 .icons {
@@ -330,7 +342,7 @@ ul.nav-links li a:hover {
 
     100% {
         opacity: 0.5;
-        transform: translateY(-1100px) rotate(-45deg);
+        transform: translateY(-1500px) rotate(-45deg);
     }
 }
 
@@ -349,8 +361,6 @@ ul.nav-links li a:hover {
     ul.nav-links li {
         width: auto;
     }
-
-
 
     .social-icons {
         display: block;
@@ -402,66 +412,64 @@ ul.nav-links li a:hover {
     }
 
     .health-check-text {
-        top: 60%;
-        font-size: 1.2rem;
+        animation: bounceColor 1s infinite;
+        top: -100px;
+        /* Move it up */
+        left: 1px;
+        /* Move it to the right */
+        font-size: 1.5rem;
+        margin-right: -170px;
+        /* Keep this if needed for layout */
+        position: relative;
+        /* Allows using top/left */
     }
+
 
     .icons {
         bottom: 60px;
     }
 }
 
-@keyframes bounceColor {
 
-    0%,
-    100% {
-        transform: translateY(0);
-        color: hsl(0, 0%, 100%);
-    }
-
-    40% {
-        transform: translateY(-10px);
-        color: hsl(0, 0%, 0%);
-    }
-}
 
 .health-check-text {
     animation: bounceColor 1s infinite;
+    top: -100px;
+    /* Move it up */
+    left: 20px;
+    /* Move it to the right */
+    font-size: 1.5rem;
+    margin-right: -170px;
+    /* Keep this if needed for layout */
+    position: relative;
+    /* Allows using top/left */
 }
+
 
 .button-container {
     display: flex;
     flex-direction: row;
-    /* Default layout for larger screens */
-    gap: -90px;
-    /* Space between buttons */
+    gap: 30px;
     margin: -25px 0;
-    /* Adjust this value for vertical spacing */
     justify-content: left;
-    /* Center the buttons horizontally */
 }
 
 @media screen and (max-width: 768px) {
     .button-container {
         flex-direction: column;
-        /* Stack buttons on mobile */
         gap: 5px;
-        /* Adjust space for stacked buttons */
         align-items: center;
-        /* Center align buttons */
     }
 
     .contact-button,
     .pricing-button {
         width: 100%;
-        /* Make buttons full-width on mobile */
         max-width: 300px;
-        /* Set a max width for better appearance */
     }
 }
 
 .pricing-button {
-    margin: -10px 0;
+    margin: 25px 0;
     text-decoration: none;
     color: var(--accent-color);
     width: 100%;
@@ -519,4 +527,226 @@ ul.nav-links li a:hover {
 
 .pricing-button:hover span.text {
     color: #1d1d1d;
+}
+
+.services {
+    padding: 50px 0;
+    text-align: center;
+    background: linear-gradient(to right, hsl(197, 84%, 17%), hsl(208, 55%, 50%));
+    /* Updated background for subtle contrast */
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.service-box {
+    background: linear-gradient(135deg, #3a899c, #d9e7d5);
+    /* Updated gradient for softer appeal */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 360px;
+}
+
+.service-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.service-box p {
+    color: var(--dark-color);
+    /* Dark text for description */
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .service-box {
+        width: 100%;
+    }
+}
+
+footer {
+    background-color: #333;
+    /* Keep dark background */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-links {
+    margin-top: 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+    /* Change hover color to accent */
+    text-decoration: underline;
+}
+
+
+
+/* Add this media query at the bottom of your CSS for mobile responsiveness */
+@media screen and (max-width: 800px) {
+    .hero-img {
+        display: none;
+        /* Hides the hero image */
+    }
+
+    .nav-center {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        /* Adjust width */
+    }
+
+    nav {
+        flex-direction: row;
+        /* Change to row to keep items horizontal */
+        align-items: center;
+        /* Center items vertically */
+    }
+
+    ul.nav-links {
+        flex-direction: column;
+        /* Stack links */
+        height: auto;
+        /* Adjust height */
+    }
+
+    .social-icons {
+        display: block;
+        /* Ensure social icons display on mobile */
+        margin: 10px 0;
+        /* Add margin */
+    }
+
+    .contact-button,
+    .pricing-button {
+        max-width: 100%;
+        /* Adjust button width */
+        margin: 10px auto;
+        /* Center buttons */
+    }
+
+    .about-desc h2 {
+        font-size: 3rem;
+        /* Adjust font size */
+    }
+
+    .about-desc #name {
+        font-size: 4rem;
+        /* Adjust font size */
+    }
+
+    .about-desc #job {
+        font-size: 1.8rem;
+        /* Adjust font size */
+    }
+
+    .achievement h1 {
+        font-size: 2.5rem;
+        /* Adjust font size */
+    }
+
+    .service-box {
+        width: 90%;
+        /* Adjust service box width */
+    }
+}
+
+/* Existing media query for smaller devices */
+@media screen and (max-width: 500px) {
+    .about-desc {
+        margin-top: 10vh;
+        padding: 0 10px;
+        /* Add padding */
+    }
+
+    .icons {
+        bottom: 60px;
+        /* Adjust icon positioning */
+    }
+}
+
+/* Ensure buttons and text fit well on smaller screens */
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* Reduce gap for smaller screens */
+    justify-content: left;
+    /* Center buttons */
+}
+
+@media screen and (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+        /* Adjust gap */
+    }
+}
+
+.sidebar-button {
+    position: fixed;
+    top: 50%;
+    right: -150px;
+    /* Start hidden off the screen */
+    transform: translateY(-50%);
+    transition: right 0.3s ease;
+}
+
+#toggle-button {
+    background-color: #007bff;
+    /* Customize button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#sidebar-content {
+    background-color: white;
+    /* Customize background color */
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+#sidebar-content.visible {
+    display: block;
+}
+
+.sidebar-button.active {
+    right: 0;
+    /* Move button into view */
 }

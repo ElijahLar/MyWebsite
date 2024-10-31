@@ -1,0 +1,231 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, hsl(210, 60%, 50%), hsl(210, 50%, 45%));
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    /* Change from center to flex-start */
+    align-items: center;
+    padding: 20px;
+    background: inherit;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    /* Add some space to the right of the logo */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    flex: 1;
+}
+
+.pricing-section {
+    padding: 60px 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.pricing-box {
+    background: linear-gradient(135deg, #3a899c, #d9e7d5);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.service-logos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    /* Space below the logo */
+}
+
+.service-logo {
+    width: 100px;
+    /* Adjust the size as needed */
+    height: auto;
+}
+
+.pricing-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-box h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.pricing-box .price {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.pricing-box p {
+    margin: 10px 0;
+}
+
+.pricing-box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1px 0;
+}
+
+.pricing-box ul li {
+    margin: 7px 0;
+}
+
+.contact-button {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 20px;
+    border: 3px solid #ff9800;
+    background: transparent;
+    border-radius: 1000px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    /* Push button to the bottom */
+}
+
+.contact-button:hover {
+    background: #ff9800;
+    color: #000000;
+    transform: translateY(-5px);
+}
+
+.footer-container {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 25px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff9800;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 800px) {
+    header {
+        flex-direction: column;
+    }
+
+    .main {
+        margin-top: 0;
+        /* Remove margin for mobile */
+    }
+
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-box {
+        width: 100%;
+        /* Wider pricing boxes on small screens */
+        margin: 10px 0;
+        /* Adjust margin for better spacing */
+        height: auto;
+        /* Allow boxes to adjust height on mobile */
+    }
+
+    .contact-button {
+        width: 100%;
+        /* Full width buttons on mobile */
+        padding: 15px;
+        /* More padding for touch targets */
+        box-sizing: border-box;
+        /* Include padding in width */
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .pricing-box {
+        transition: transform 0.3s, box-shadow 0.3s, width 0.3s;
+        /* Ensure smooth width transitions */
+    }
+}
+
+.typing-container {
+    flex-grow: 1;
+    /* Allow it to take available space */
+}
+
+.typing-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    /* Adjust size as needed */
+    color: #bbd3d0;
+    /* Match your design */
+    overflow: hidden;
+    /* Ensures the text appears one letter at a time */
+    white-space: nowrap;
+    /* Keeps the text on one line */
+    border-right: 3px solid;
+    /* Cursor effect */
+    animation: caret 0.75s step-end infinite;
+    /* Cursor blinking effect */
+    text-align: center;
+    margin-right: 90px;
+}
+
+/* Cursor Blinking Animation */
+@keyframes caret {
+    from {
+        border-color: transparent;
+    }
+
+    to {
+        border-color: white;
+        /* Match the text color */
+    }
+}
