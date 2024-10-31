@@ -261,14 +261,12 @@ ul.nav-links li a:hover {
 
 .hero-img {
     align-items: center;
-    /* This pushes the image to the right */
-    margin-right: 0;
-    /* Optional: to remove any right margin */
+    margin-right: 80px;
     display: block;
-    /* Ensure it's block-level */
-    margin-bottom: -350px;
+    margin-bottom: -185px;
     opacity: 80%;
-    margin-right: 50%;
+    margin-left: 20px;
+
 }
 
 
