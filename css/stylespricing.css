@@ -57,7 +57,7 @@ header {
 }
 
 .pricing-box {
-    background: background: radial-gradient(circle, hsl(192, 41%, 46%), hsl(240, 10%, 73%));
+    background: linear-gradient(to left, hsl(210, 25%, 49%), hsl(210, 74%, 35%));
 
     border-radius: 10px;
     padding: 25px;
