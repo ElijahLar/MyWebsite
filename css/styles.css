@@ -259,15 +259,19 @@ ul.nav-links li a:hover {
     color: #1d1d1d;
 }
 
+
+
 .hero-img {
     align-items: center;
     margin-right: 80px;
     display: block;
     margin-bottom: -185px;
-    opacity: 80%;
+    opacity: 50%;
     margin-left: 20px;
 
 }
+
+
 
 
 @media screen and (max-width: 800px) {
@@ -332,8 +336,9 @@ ul.nav-links li a:hover {
     background: rgba(211, 114, 11, 0.35);
     width: 30px;
     height: 30px;
-    animation: square 15s infinite;
+    animation: square 9s infinite;
 }
+
 
 @keyframes square {
     0% {
@@ -372,7 +377,7 @@ ul.nav-links li a:hover {
     }
 
     .hero-img img {
-        width: 80%;
+        width: 60%;
     }
 }
 
@@ -517,7 +522,7 @@ ul.nav-links li a:hover {
 }
 
 .service-box {
-    background: linear-gradient(135deg, #3a899c, #d9e7d5);
+    background: linear-gradient(to right, hsl(232, 45%, 69%), hsl(210, 1%, 59%));
     /* Updated gradient for softer appeal */
     border-radius: 10px;
     padding: 20px;
