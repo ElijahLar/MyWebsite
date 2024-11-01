@@ -562,6 +562,7 @@ footer {
     text-align: center;
     position: relative;
     overflow: hidden;
+    margin: auto;
 }
 
 .footer-container {

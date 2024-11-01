@@ -57,7 +57,8 @@ header {
 }
 
 .pricing-box {
-    background: linear-gradient(135deg, #3a899c, #d9e7d5);
+    background: background: radial-gradient(circle, hsl(192, 41%, 46%), hsl(240, 10%, 73%));
+
     border-radius: 10px;
     padding: 25px;
     margin: 10px;
@@ -138,7 +139,12 @@ header {
 
 .contact-button {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
     padding: 10px 20px;
     border: 3px solid #ff9800;
     background: transparent;
@@ -151,7 +157,7 @@ header {
 
 .contact-button:hover {
     background: #ff9800;
-    color: #000000;
+    color: #ffffff;
     transform: translateY(-5px);
 }
 
@@ -161,7 +167,7 @@ header {
     padding: 40px 20px;
     text-align: center;
     flex-shrink: 0;
-    margin-top: 25px;
+    margin-top: 100px;
 }
 
 .footer-links a {
@@ -172,7 +178,7 @@ header {
 }
 
 .footer-links a:hover {
-    color: #ff9800;
+    color: #7a5011;
 }
 
 /* Media Queries for Responsiveness */
@@ -236,7 +242,7 @@ header {
 
 .typing-text {
     font-family: 'Roboto', sans-serif;
-    font-size: 6vw;
+    font-size: 3vw;
     /* Responsive font size */
     color: #bbd3d0;
     overflow: hidden;
@@ -270,4 +276,48 @@ header {
         border-color: white;
         /* Match the text color */
     }
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

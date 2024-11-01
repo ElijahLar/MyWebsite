@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize menu state if needed
 });
 
-const text = "Great services for great prices!";
+const text = "Bra tjänster för bra priser!";
 let index = 0;
 
 function type() {
@@ -49,4 +49,30 @@ function type() {
     }
 }
 
+
+
 window.onload = type; // Start typing when the page loads
+
+// Get modal elements
+const modal = document.getElementById("contact-modal");
+const closeButton = document.querySelector(".close-button");
+const contactForm = document.getElementById("contact-form");
+
+// Function to open the modal and set the plan value
+function openModal(planName) {
+    document.getElementById("plan").value = planName; // Set the selected plan
+    modal.style.display = "block"; // Show the modal
+}
+
+// Close the modal
+closeButton.onclick = function () {
+    modal.style.display = "none";
+}
+
+// Close the modal if the user clicks outside of it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+

@@ -1,17 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MZQM4LX9');</script>
-<!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Kontakta Oss</title>
     <style>
         html,
         body {
@@ -23,32 +16,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         body {
             display: flex;
             flex-direction: column;
-            background: linear-gradient(to right, hsl(231, 31%, 71%), hsl(210, 93%, 16%));
+            background: linear-gradient(to right, hsl(233, 15%, 45%), hsl(210, 100%, 12%));
             color: #000000;
             font-family: 'Open Sans', sans-serif;
             margin: 0;
             width: 100vw;
             height: 100vh;
             justify-content: center;
-            /* Center vertically */
+            /* Centrera vertikalt */
             align-items: center;
-            /* Center horizontally */
+            /* Centrera horisontellt */
         }
 
         h2 {
             text-align: center;
             margin: 0;
-            /* Remove default margin */
+            /* Ta bort standardmarginal */
             white-space: nowrap;
-            /* Prevent text from wrapping */
+            /* Förhindra att texten går över flera rader */
             overflow: hidden;
-            /* Hide overflow for the typing effect */
+            /* Dölja överflödet för skrivandeffekt */
             border-right: 2px solid;
-            /* Create a cursor effect */
+            /* Skapa en cursor-effekt */
             width: 0;
-            /* Start with width 0 for animation */
+            /* Börja med bredd 0 för animation */
             animation: typing 2.5s steps(12) forwards, blink-caret 0.75s step-end infinite;
-            /* Faster typing animation */
+            /* Snabbare skrivande animation */
         }
 
         @keyframes typing {
@@ -60,7 +53,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 width: 12ch;
             }
 
-            /* Adjust based on the text length */
+            /* Justera baserat på textens längd */
         }
 
         @keyframes blink-caret {
@@ -149,30 +142,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZQM4LX9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <h2 id="heading">Contact Us</h2>
+    <h2 id="heading">Kontakta Oss</h2>
     <form action="https://formspree.io/f/mdkoeado" method="POST">
         <div class="plan-selection">
-            <button type="button" onclick="updatePlan('Basic Plan')">Basic Plan</button>
-            <button type="button" onclick="updatePlan('Standard Plan')">Standard Plan</button>
-            <button type="button" onclick="updatePlan('Premium Plan')">Premium Plan</button>
+            <button type="button" onclick="updatePlan('Basplan')">Basplan</button>
+            <button type="button" onclick="updatePlan('Standardplan')">Standardplan</button>
+            <button type="button" onclick="updatePlan('Premiumplan')">Premiumplan</button>
         </div>
         <label>
-            Your email:
+            Din e-post:
             <input type="email" name="email" required>
         </label>
         <label>
-            Selected Plan:
+            Vald plan:
             <input type="text" id="selectedPlan" name="plan" readonly>
         </label>
         <label>
-            What exactly do you need help with?:
+            Vad behöver du hjälp med?:
             <textarea name="message" required></textarea>
         </label>
-        <button type="submit">Send</button>
+        <button type="submit">Skicka</button>
     </form>
 
     <script>
@@ -182,14 +171,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         function startTypingAnimation() {
             const heading = document.getElementById('heading');
-            heading.style.animation = 'none'; // Reset animation
+            heading.style.animation = 'none'; // Återställ animation
             setTimeout(() => {
-                heading.style.animation = 'typing 2.5s steps(12) forwards, blink-caret 0.75s step-end infinite'; // Restart animation
-            }, 100); // Short delay to allow resetting
+                heading.style.animation = 'typing 2.5s steps(12) forwards, blink-caret 0.75s step-end infinite'; // Starta om animation
+            }, 100); // Kort fördröjning för att möjliggöra återställning
         }
 
-        setInterval(startTypingAnimation, 4000); // Repeat every 4 seconds (2.5s typing + 1.5s delay)
-        startTypingAnimation(); // Start the animation on load
+        setInterval(startTypingAnimation, 4000); // Upprepa var 4:e sekund (2.5s skrivande + 1.5s fördröjning)
+        startTypingAnimation(); // Starta animationen vid inladdning
     </script>
 </body>
 

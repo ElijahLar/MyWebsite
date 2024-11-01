@@ -33,5 +33,11 @@ navLinks.forEach(link => {
     });
 });
 
+
+
+
+
+
+
 // Toggle menu on icon click
 toggleBtnIcons.addEventListener('click', toggleIcons);
